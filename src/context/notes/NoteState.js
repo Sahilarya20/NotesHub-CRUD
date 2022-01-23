@@ -48,18 +48,9 @@ const NoteState = (props) => {
       },
       body: JSON.stringify({title,description,tag})
     });
-    const json = response.json(); 
-
-    const note = {
-      "_id": "61d34db0975fasdfasdfff2efd841ece30",
-      "user": "61d3381472baf4ac1f2d79ff",
-      "title": title,
-      "description": description,
-      "tag": tag,
-      "date": "2022-01-03T19:25:36.671Z",
-      "__v": 0
-    };
+    const note =  await response.json(); 
     setNotes(notes.concat(note))
+    
   }
 
   //Delete Note
@@ -81,8 +72,9 @@ const NoteState = (props) => {
   //Edit a Note
   const editNote = async (id, title, description, tag) => {
     //API CALL
+    // eslint-disable-next-line
     const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
-      method: 'POST',  
+      method: 'PUT',  
       headers: {
         'Content-Type': 'application/json',
         "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjFkMzM4MTQ3MmJhZjRhYzFmMmQ3OWZmIn0sImlhdCI6MTY0MTIzMjQwNH0.SpBVBQ2apLmsAhWSrBM_rhRUqziAM1_FlT9bUDTiaJo"  
@@ -90,17 +82,19 @@ const NoteState = (props) => {
       body: JSON.stringify({title,description,tag})
     });
    
-
+    let newNotes=JSON.parse(JSON.stringify(notes))
 
     //LOGIN TO EDIT IN CLINT
-    for (let index = 0; index < notes.length; index++) {
-      const element = notes[index];
+    for (let index = 0; index < newNotes.length; index++) {
+      const element = newNotes[index];
       if (element._id === id) {
-        element.title = title;
-        element.description = description;
-        element.tag = tag;
+        newNotes[index].title = title;
+        newNotes[index].description = description;
+        newNotes[index].tag = tag;
+        break;
       }
     }
+    setNotes(newNotes);
   }
 
   return (
