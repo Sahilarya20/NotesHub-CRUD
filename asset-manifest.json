@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/NotesHub-CRUD/static/css/main.e2283b44.chunk.css",
+    "main.js": "/NotesHub-CRUD/static/js/main.71e09c4c.chunk.js",
+    "main.js.map": "/NotesHub-CRUD/static/js/main.71e09c4c.chunk.js.map",
+    "runtime-main.js": "/NotesHub-CRUD/static/js/runtime-main.6b5d0463.js",
+    "runtime-main.js.map": "/NotesHub-CRUD/static/js/runtime-main.6b5d0463.js.map",
+    "static/js/2.ae674de4.chunk.js": "/NotesHub-CRUD/static/js/2.ae674de4.chunk.js",
+    "static/js/2.ae674de4.chunk.js.map": "/NotesHub-CRUD/static/js/2.ae674de4.chunk.js.map",
+    "index.html": "/NotesHub-CRUD/index.html",
+    "static/css/main.e2283b44.chunk.css.map": "/NotesHub-CRUD/static/css/main.e2283b44.chunk.css.map",
+    "static/js/2.ae674de4.chunk.js.LICENSE.txt": "/NotesHub-CRUD/static/js/2.ae674de4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b5d0463.js",
+    "static/js/2.ae674de4.chunk.js",
+    "static/css/main.e2283b44.chunk.css",
+    "static/js/main.71e09c4c.chunk.js"
+  ]
+}
